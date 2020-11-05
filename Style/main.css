@@ -1,4 +1,4 @@
-/*Glocal style*/
+/*==============================Glocal style==============================*/
 
 :root {
     --clr-primary: #204883;
@@ -18,12 +18,12 @@
 }
 
 * {
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
 
 body {
-    margin: 0;
-    padding: 0;
     background-color: var(--clr-light-1);
     font-family: "Noto Sans TC", sans-serif;
 }
@@ -67,11 +67,11 @@ p {
 
 .p2 {
     font-size: 12px;
-    line-height: 20px;
+    line-height: 24px;
     letter-spacing: 1.4px;
 }
 
-/*===========================Main Content================================*/
+/*===========================Fixed Content================================*/
 /*Header*/
 
 .header {
@@ -89,14 +89,45 @@ p {
     margin-left: var(--sp-medium);
 }
 
+/*Bread Crumb bar*/
 .breadCrumb {
     position: fixed;
     width: 100%;
     height: 2rem;
     margin-top: 3rem;
     margin-left: 12rem;
+    display: flex;
+    align-items: center;
     background-color: var(--clr-white);
     z-index: 999;
+}
+
+.breadCrumbLink{
+    margin-left: var(--sp-medium);
+    display: flex;
+    align-items: center;
+}
+
+.breadCrumbLink-clicked{
+    opacity: 1;
+}
+
+.breadCrumb li{
+    list-style-type: none;
+    margin-right: var(--sp-medium);
+}
+
+.crumb{
+    opacity: 0;
+    transform: .3s ease;
+}
+
+.arrow{
+    opacity: 0;
+}
+
+.crumb-appeared{
+    opacity: 1;
 }
 
 /*Sidebar*/
@@ -118,7 +149,7 @@ p {
 }
 
 .sidebar-menu {
-    margin-top: 2rem;
+    margin-top: var(--sp-large);
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -136,13 +167,17 @@ p {
     align-items: center;
     justify-content: center;
     transition: 0.3s ease;
+    cursor: pointer;
 }
 
-.sidebar-button:hover {
+.sidebar-button:not(.no-hover):hover {
     background-color: var(--clr-primary-x1);
 }
 
+
+
 .sidebar-button-clicked {
+    pointer-events: none;
     background-color: var(--clr-primary);
     -webkit-box-shadow: inset 0px 0px 1px 3px rgba(7, 24, 41, 1);
     -moz-box-shadow: inset 0px 0px 1px 3px rgba(7, 24, 41, 1);
@@ -158,65 +193,38 @@ p {
     fill: var(--clr-light);
 }
 
-/*Second Sidebar*/
+/*Submenu to main screen*/
 
-.subSidebar {
+.main-screen{
     position: fixed;
-    top: 0;
-    bottom: 0;
-    width: 12rem;
+    top:5rem;
+    left: 0rem;
     height: 100vh;
-    margin-top: 5rem;
-    margin-left: 0rem;
-    overflow-y: scroll;
-    opacity: 0;
+    width: calc(100% - 195px);
     z-index: 800;
-    transition: 0.3s ease;
+    opacity: 0;
+    transition: .3s ease;
 }
 
-.subSidebar-clicked {
-    margin-left: 12rem;
+.main-screen-clicked{
+    left: 12rem;
     opacity: 1;
-}
-
-.sub-sidebar-menu {
-    margin-bottom: 10rem;
-}
-
-.sub-sidebar-menu p {
-    color: var(--clr-dark);
-    margin-left: var(--sp-medium);
-    width: 8rem;
-    padding: 5px;
-    border-radius: 10px;
-    transition: 0.3s ease;
-}
-
-.sub-sidebar-menu p:hover {
-    padding: 8px;
-    color: var(--clr-light);
-    background-color: var(--clr-primary-x1);
-}
-
-.sub-sidebar-menu .p2 {
-    margin-top: var(--sp-large);
-    color: var(--clr-primary-x1);
-    pointer-events: none;
 }
 
 .overviewScreen {
     position: fixed;
     top: 5rem;
     bottom: 0;
-    right: 0;
+    right: 12rem;
     left: 12rem;
-    width: 100%;
+    width: calc(100% - 195px);
     height: 100vh;
     z-index: 700;
     opacity: 0;
     overflow-y: scroll;
     pointer-events: none;
 }
+
 .overviewScreen-clicked{
     opacity: 1;
     pointer-events: auto;
@@ -225,6 +233,7 @@ p {
 
 /*================================Main content================================*/
 
+/*Landing info*/
 .landing-nav {
     position: fixed;
     top: 5rem;
@@ -240,12 +249,17 @@ p {
 }
 
 .head-info {
-    margin: var(--sp-large) 0 var(--sp-small);
+    margin: var(--sp-medium) 0 var(--sp-small);
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
 }
+
+.head-info h2{
+    margin: var(--sp-medium) 0;
+}
+
 .head-info .logo {
     width: 4rem;
 }
@@ -278,3 +292,4 @@ p {
 .nav-button-info h4 {
     margin: 1rem 0;
 }
+
