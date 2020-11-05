@@ -31,19 +31,18 @@ body{
 .sub-sidebar-nav {
      border-radius: var(--sp-small);
      width: 8rem;
-     margin-bottom: var(--sp-medium);
+     margin-bottom: var(--sp-small);
      margin-left: var(--sp-medium);
+     padding: 5px;
      transition: 0.3s ease;
 }
 
 .sub-sidebar-nav:hover {
-     padding: 8px;
      color: var(--clr-light);
      background-color: var(--clr-primary-x1);
 }
 
 .sub-sidebar-nav-clicked {
-     padding: 8px;
      color: var(--clr-light);
      background-color: var(--clr-primary);
 }
