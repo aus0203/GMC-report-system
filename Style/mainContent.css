@@ -55,9 +55,15 @@ body{
      bottom: 0rem;
      margin: var(--sp-medium);
      width: calc(100% - 220px);
-     height: calc(100% - 110px);
+     height: calc(100% - 80px);
      border-radius: var(--sp-small);
      z-index: 1000;
+     opacity: 0;
+     transition: .3s ease;
+}
+
+.main-content-clicked{
+     opacity: 1;
 }
 
 /*Overview*/

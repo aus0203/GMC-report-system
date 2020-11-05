@@ -3,19 +3,26 @@
 body{
     overflow: hidden;
     background-color: var(--clr-light); 
+}
 
+.page-box-bar{
+    width: 10000px;
+    position: fixed;
+    overflow: auto;
 }
 
 .page-tab{
     position: relative;
     display: inline-block;
-    padding: var(--sp-small) var(--sp-medium);
+    padding: 4px var(--sp-medium);
     cursor: pointer;
+    transition: .2s ease;
 }
 
-.page-box-bar{
-    position: relative;
+.page-tab p{
+    font-size: 12px;
 }
+
 
 .page-box{
     position: absolute;
@@ -36,5 +43,5 @@ body{
     height: calc(100vh - 72px);
     z-index: 1500;
     overflow: auto;
-    margin: var(--sp-medium);
+    margin: var(--sp-large);
 }

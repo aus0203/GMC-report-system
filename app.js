@@ -4,10 +4,6 @@ const mainScreen = document.querySelector(".main-screen");
 const overviewScreen = document.querySelector('.overviewScreen');
 const landingNav = document.querySelector(".landing-nav");
 
-/*BreadCrumb*/
-const breadCrumbLinks = document.querySelector(".breadCrumbLink");
-const crumb1 = document.querySelector('.crumb1');
-
 /*Main content frame*/
 const mainInfoScreen =document.querySelector('mainInfoScreen')
 
@@ -32,10 +28,7 @@ function sidebarclick(element) {
         mainScreen.src = "./SecondSidebar/總覽.html"
     }
 
-    /*Bread Crumb shift first layer*/
-    breadCrumbLinks.classList.add('nav-link-clicked');
-    crumb1.classList.add('crumb-appeared');
-    crumb1.getElementsByTagName('p')[0].innerText = element.getElementsByTagName('p')[0].innerText;
+  
 }
 
 

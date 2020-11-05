@@ -89,47 +89,6 @@ p {
     margin-left: var(--sp-medium);
 }
 
-/*Bread Crumb bar*/
-.breadCrumb {
-    position: fixed;
-    width: 100%;
-    height: 2rem;
-    margin-top: 3rem;
-    margin-left: 12rem;
-    display: flex;
-    align-items: center;
-    background-color: var(--clr-white);
-    z-index: 999;
-}
-
-.breadCrumbLink{
-    margin-left: var(--sp-medium);
-    display: flex;
-    align-items: center;
-}
-
-.breadCrumbLink-clicked{
-    opacity: 1;
-}
-
-.breadCrumb li{
-    list-style-type: none;
-    margin-right: var(--sp-medium);
-}
-
-.crumb{
-    opacity: 0;
-    transform: .3s ease;
-}
-
-.arrow{
-    opacity: 0;
-}
-
-.crumb-appeared{
-    opacity: 1;
-}
-
 /*Sidebar*/
 
 .sidebar {
@@ -197,46 +156,29 @@ p {
 
 .main-screen{
     position: fixed;
-    top:5rem;
+    top:3rem;
     left: 0rem;
     height: 100vh;
     width: calc(100% - 195px);
     z-index: 800;
     opacity: 0;
-    transition: .3s ease;
+    transition: .5s ease;
+    pointer-events: none;
 }
 
 .main-screen-clicked{
     left: 12rem;
     opacity: 1;
-}
-
-.overviewScreen {
-    position: fixed;
-    top: 5rem;
-    bottom: 0;
-    right: 12rem;
-    left: 12rem;
-    width: calc(100% - 195px);
-    height: 100vh;
-    z-index: 700;
-    opacity: 0;
-    overflow-y: scroll;
-    pointer-events: none;
-}
-
-.overviewScreen-clicked{
-    opacity: 1;
     pointer-events: auto;
-
 }
+
 
 /*================================Main content================================*/
 
 /*Landing info*/
 .landing-nav {
     position: fixed;
-    top: 5rem;
+    top: 4rem;
     bottom: 0;
     right: 0;
     left: 6rem;
@@ -271,7 +213,7 @@ p {
 }
 
 .nav-button {
-    height: 8rem;
+    height: 9rem;
     margin: 0.8rem;
     padding: var(--sp-medium);
     border-radius: var(--sp-small);
