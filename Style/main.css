@@ -220,6 +220,7 @@ p {
     background-color: var(--clr-light);
     transition: 0.3s ease;
     display: flex;
+    cursor: pointer;
 }
 
 .nav-button:hover {

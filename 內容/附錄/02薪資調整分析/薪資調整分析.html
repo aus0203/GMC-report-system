@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>薪資調整分析</title>
+    <link rel="stylesheet" href="../../../Style/main.css">
+    <link rel="stylesheet" href="../../../Style/content.css">
+</head>
+
+<body>
+    <div class="main-content-wrapper">
+        <div class="page-tab-bar">
+            <div onclick="mainTabshift(this)" id="page1" class="page-tab page-click">
+                <p>調薪頻率／調薪日期</p>
+            </div>
+            <div onclick="mainTabshift(this)" id="page2" class="page-tab">
+                <p>新進員工調薪頻率</p>
+            </div>
+            <div onclick="mainTabshift(this)" id="page3" class="page-tab">
+                <p>調薪幅度分析</p>
+            </div>
+            <div onclick="mainTabshift(this)" id="page4" class="page-tab">
+                <p>薪資調幅分析／整體</p>
+            </div>
+            <div onclick="mainTabshift(this)" id="page5" class="page-tab">
+                <p>薪資調幅分析／行業別</p>
+            </div>
+        </div>
+        <div class="page-box-bar">
+            <div class="page-box">
+            </div>
+            <iframe class="main-info-box" src="./資料擺放/01調薪頻率-調薪日期.html" frameborder="0"></iframe>
+        </div>
+    </div>
+    </div>
+
+    <script src="./薪資調整分析.js"></script>
+</body>
+
+</html>

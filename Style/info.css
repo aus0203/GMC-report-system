@@ -1,3 +1,15 @@
 body{
     background-color: white;
 }
+
+.info-box{
+    margin: var(--sp-large) 0 var(--sp-large) var(--sp-large);
+    width: 52rem;
+}
+
+.info-title{
+    margin-bottom: var(--sp-large);
+    color:var(--clr-primary)
+}
+
+
